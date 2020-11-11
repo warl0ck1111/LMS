@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane prefHeight="600.0" prefWidth="1300.0" stylesheets="@../style/theme.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lms.controller.LibrarianMenuController">
+   <top>
+      <MenuBar prefHeight="0.0" prefWidth="1300.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Menu">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#aboutHandler" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <center>
+      <TabPane BorderPane.alignment="CENTER">
+         <tabs>
+            <Tab fx:id="profileTab" closable="false" onSelectionChanged="#refreshProfileTab" text="Profile">
+               <content>
+               </content>
+            </Tab>
+            <Tab fx:id="registerUserTab" closable="false" onSelectionChanged="#refreshRegisterUserTab" text="Register User">
+               <content>
+               </content>
+            </Tab>
+            <Tab fx:id="viewUsersTab" closable="false" onSelectionChanged="#refreshViewUsersTab" text="View Users">
+               <content>
+               </content>
+            </Tab>
+            <Tab fx:id="viewResourcesTab" closable="false" onSelectionChanged="#refreshViewResourcesTab" text="View Resources">
+               <content>
+               </content>
+            </Tab>
+            <Tab fx:id="viewRequestsTab" closable="false" onSelectionChanged="#refreshViewRequestsTab" text="View Requests">
+               <content>
+               </content>
+            </Tab>
+            <Tab fx:id="viewJournalTab" closable="false" onSelectionChanged="#refreshViewJournalTab" text="View Journal">
+              <content>
+              </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+   </center>
+   <bottom>
+      <HBox alignment="CENTER" prefHeight="66.0" prefWidth="1300.0" spacing="90.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Copyright CIT324 Group 3 Members" />
+            <Button fx:id="logoutButton" alignment="CENTER" mnemonicParsing="false" onAction="#logoutButtonHandler" text="Logout" />
+         </children>
+      </HBox>
+   </bottom>
+</BorderPane>

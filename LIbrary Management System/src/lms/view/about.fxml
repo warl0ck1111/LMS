@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.cell.*?>
+
+<VBox prefHeight="335.0" prefWidth="400.0" stylesheets="@../style/theme.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lms.controller.AboutController">
+   <children>
+      <TableView fx:id="membersTable" prefHeight="400.0" prefWidth="400.0">
+        <columns>
+          <TableColumn editable="false" prefWidth="229.0" resizable="false" sortable="false" text="Name">
+              <cellValueFactory>
+                <PropertyValueFactory property="name" />  
+              </cellValueFactory>
+          </TableColumn>
+          <TableColumn editable="false" prefWidth="164.0" resizable="false" sortable="false" text="Matric Number">
+              <cellValueFactory>
+                <PropertyValueFactory property="matricNumber" />  
+              </cellValueFactory>
+          </TableColumn>
+        </columns>
+      </TableView>
+   </children>
+</VBox>

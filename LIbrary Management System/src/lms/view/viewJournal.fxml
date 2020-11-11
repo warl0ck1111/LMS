@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.cell.*?>
+
+<VBox prefHeight="500.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lms.controller.ViewJournalController">
+   <children>
+      <TableView fx:id="journalTable" prefHeight="500.0" prefWidth="1300.0">
+        <columns>
+          <TableColumn fx:id="activityNumberCol" prefWidth="113.0" text="Activity No">
+              <cellValueFactory>
+                <PropertyValueFactory property="activityNumber" />
+              </cellValueFactory>
+          </TableColumn>
+          <TableColumn fx:id="nameCol" prefWidth="315.0" text="Name">
+              <cellValueFactory>
+                <PropertyValueFactory property="name" />
+              </cellValueFactory>
+          </TableColumn>
+          <TableColumn fx:id="uidLibrarianCol" prefWidth="184.0" text="ID of Librarian Involved">
+              <cellValueFactory>
+                <PropertyValueFactory property="uidLibrarian" />
+              </cellValueFactory>
+          </TableColumn>
+          <TableColumn fx:id="uidLibraryUserCol" minWidth="0.0" prefWidth="237.0" text="Matric Number of User Involved">
+              <cellValueFactory>
+                <PropertyValueFactory property="uidLibraryUser" />
+              </cellValueFactory>
+          </TableColumn>
+          <TableColumn fx:id="ridCol" minWidth="0.0" prefWidth="183.0" text="ID of Resource Involved">
+              <cellValueFactory>
+                <PropertyValueFactory property="rid" />
+              </cellValueFactory>
+          </TableColumn>
+          <TableColumn fx:id="dateCol" prefWidth="251.0" sortType="DESCENDING" text="Date of Activity">
+              <cellValueFactory>
+                <PropertyValueFactory property="date" />
+              </cellValueFactory>
+          </TableColumn>
+        </columns>
+      </TableView>
+   </children>
+</VBox>

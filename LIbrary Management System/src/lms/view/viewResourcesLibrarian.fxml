@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.cell.*?>
+
+<VBox prefHeight="500.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lms.controller.ViewResourcesLibrarianController">
+   <children>
+      <HBox alignment="CENTER" prefHeight="70.0" prefWidth="1300.0">
+         <children>
+            <Label fx:id="titleLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="48.0" prefWidth="449.0" />
+            <HBox alignment="CENTER_RIGHT" prefHeight="65.0" prefWidth="831.0" spacing="10.0">
+               <children>
+                  <TextField fx:id="searchField" onAction="#searchButtonHandler" promptText="Type Here" />
+                  <Button fx:id="searchButton" mnemonicParsing="false" onAction="#searchButtonHandler" text="Search" />
+                  <ChoiceBox fx:id="searchByChoiceBox" prefWidth="150.0" />
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+      <TableView fx:id="resourcesTable" prefHeight="300.0" prefWidth="1300.0">
+        <columns>
+          <TableColumn fx:id="ridCol" prefWidth="73.0" text="Resource ID">
+              <cellValueFactory>
+                <PropertyValueFactory property="rid" />
+              </cellValueFactory>
+          </TableColumn>
+          <TableColumn fx:id="nameCol" prefWidth="317.0" text="Name">
+              <cellValueFactory>
+                <PropertyValueFactory property="name" />
+              </cellValueFactory>
+          </TableColumn>
+          <TableColumn fx:id="typeCol" prefWidth="124.0" text="Type">
+              <cellValueFactory>
+                <PropertyValueFactory property="type" />
+              </cellValueFactory>
+          </TableColumn>
+          <TableColumn fx:id="categoryCol" prefWidth="331.0" text="Category">
+              <cellValueFactory>
+                <PropertyValueFactory property="category" />
+              </cellValueFactory>
+          </TableColumn>
+          <TableColumn fx:id="totalQuantityCol" prefWidth="89.0" text="Total Quantity">
+              <cellValueFactory>
+                <PropertyValueFactory property="totalQuantity" />
+              </cellValueFactory>
+          </TableColumn>
+          <TableColumn fx:id="remainingQuantityCol" minWidth="0.0" prefWidth="121.0" text="Remaining Quantity">
+              <cellValueFactory>
+                <PropertyValueFactory property="remainingQuantity" />
+              </cellValueFactory>
+          </TableColumn>
+          <TableColumn fx:id="dateCol" prefWidth="227.0" text="Data Added">
+              <cellValueFactory>
+                <PropertyValueFactory property="dateAdded" />
+              </cellValueFactory>
+          </TableColumn>
+        </columns>
+      </TableView>
+      <HBox alignment="CENTER" prefHeight="80.0" prefWidth="1300.0" spacing="20.0">
+         <children>
+            <Label text="Resource Name" />
+            <TextField fx:id="nameField" prefHeight="25.0" prefWidth="302.0" promptText="Resource Full Name &amp; Author" />
+            <Label text="Type" />
+            <ChoiceBox fx:id="typeChoiceBox" prefHeight="25.0" prefWidth="126.0" />
+            <Label text="Category" />
+            <ChoiceBox fx:id="categoryChoiceBox" prefHeight="25.0" prefWidth="229.0" />
+            <Label text="Quantity" />
+            <ChoiceBox fx:id="quantityChoiceBox" prefHeight="25.0" prefWidth="48.0" />
+            <Button fx:id="addResourceButton" mnemonicParsing="false" onAction="#addResourceButtonHandler" text="Add Resource" />
+         </children>
+      </HBox>
+      <Label fx:id="messageLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="50.0" prefWidth="1300.0" />
+   </children>
+</VBox>

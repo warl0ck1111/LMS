@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.cell.*?>
+
+<VBox prefHeight="500.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lms.controller.ViewResourcesLibraryUserController">
+   <children>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="1300.0">
+         <children>
+            <Label fx:id="titleLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="81.0" prefWidth="469.0" />
+            <HBox alignment="CENTER_RIGHT" prefHeight="44.0" prefWidth="817.0" spacing="10.0">
+               <children>
+                  <TextField fx:id="searchField" onAction="#searchButtonHandler" promptText="Type Here" />
+                  <Button fx:id="searchButton" mnemonicParsing="false" onAction="#searchButtonHandler" text="Search" />
+                  <ChoiceBox fx:id="searchByChoiceBox" prefWidth="150.0" />
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+      <TableView fx:id="resourcesTable" prefHeight="400.0" prefWidth="1300.0">
+        <columns>
+          <TableColumn fx:id="ridCol" text="Resource ID">
+              <cellValueFactory>
+                <PropertyValueFactory property="rid" />
+              </cellValueFactory>
+          </TableColumn>
+          <TableColumn fx:id="nameCol" prefWidth="376.0" text="Name">
+              <cellValueFactory>
+                <PropertyValueFactory property="name" />
+              </cellValueFactory>
+          </TableColumn>
+          <TableColumn fx:id="typeCol" prefWidth="151.0" text="Type">
+              <cellValueFactory>
+                <PropertyValueFactory property="type" />
+              </cellValueFactory>
+          </TableColumn>
+          <TableColumn fx:id="categoryCol" prefWidth="310.0" text="Category">
+              <cellValueFactory>
+                <PropertyValueFactory property="category" />
+              </cellValueFactory>
+          </TableColumn>
+          <TableColumn fx:id="remainingQuantityCol" minWidth="0.0" prefWidth="122.0" text="Remaining Quantity">
+              <cellValueFactory>
+                <PropertyValueFactory property="remainingQuantity" />
+              </cellValueFactory>
+          </TableColumn>
+          <TableColumn fx:id="dateCol" prefWidth="260.0" text="Data Added">
+              <cellValueFactory>
+                <PropertyValueFactory property="dateAdded" />
+              </cellValueFactory>
+          </TableColumn>
+        </columns>
+      </TableView>
+   </children>
+</VBox>

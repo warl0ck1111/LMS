@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.cell.*?>
+
+<VBox prefHeight="500.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lms.controller.ViewUsersController">
+   <children>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="1300.0">
+         <children>
+            <Label fx:id="titleLabel" alignment="CENTER" prefHeight="75.0" prefWidth="499.0" />
+            <HBox alignment="CENTER_RIGHT" prefHeight="56.0" prefWidth="742.0" spacing="10.0">
+               <children>
+                  <TextField fx:id="searchField" onAction="#searchButtonHandler" promptText="Type Here" />
+                  <Button fx:id="searchButton" mnemonicParsing="false" onAction="#searchButtonHandler" text="Search" />
+                  <ChoiceBox fx:id="searchByChoiceBox" prefHeight="25.0" prefWidth="195.0" />
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+      <TableView fx:id="usersTable" prefHeight="400.0" prefWidth="1300.0">
+        <columns>
+          <TableColumn fx:id="firstnameCol" prefWidth="130.0" text="First Name">
+              <cellValueFactory>
+                <PropertyValueFactory property="firstname" />
+              </cellValueFactory>
+          </TableColumn>
+          <TableColumn fx:id="lastnameCol" prefWidth="173.0" text="Last Name">
+              <cellValueFactory>
+                <PropertyValueFactory property="lastname" />
+              </cellValueFactory>
+          </TableColumn>
+          <TableColumn fx:id="uidCol" prefWidth="172.0" text="Matric Number">
+              <cellValueFactory>
+                <PropertyValueFactory property="uid" />
+              </cellValueFactory>
+          </TableColumn>
+          <TableColumn fx:id="genderCol" prefWidth="62.0" text="Gender">
+              <cellValueFactory>
+                <PropertyValueFactory property="gender" />
+              </cellValueFactory>
+          </TableColumn>
+          <TableColumn fx:id="departmentCol" prefWidth="400.0" text="Department">
+              <cellValueFactory>
+                <PropertyValueFactory property="department" />
+              </cellValueFactory>
+          </TableColumn>
+          <TableColumn fx:id="levelCol" minWidth="0.0" prefWidth="92.0" text="Level">
+              <cellValueFactory>
+                <PropertyValueFactory property="level" />
+              </cellValueFactory>
+          </TableColumn>
+          <TableColumn fx:id="dateCol" prefWidth="255.0" text="Data Registered">
+              <cellValueFactory>
+                <PropertyValueFactory property="registrationDate" />
+              </cellValueFactory>
+          </TableColumn>
+        </columns>
+      </TableView>
+   </children>
+</VBox>
